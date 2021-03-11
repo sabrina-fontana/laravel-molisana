@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>La Molisana</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="{{asset('css/app.css')}}">
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+      <title>La Molisana</title>
     </head>
 
     <body>
@@ -139,10 +138,22 @@
         $array = json_decode($data, true);
       @endphp
 
-      <div>{{$array[$idProduct]['titolo']}}<div>
-        <img width="300px" src="{{$array[$idProduct]['src-h']}}">
-        <img width="300px" src="{{$array[$idProduct]['src-p']}}">
-        <div>{{$array[$idProduct]['descrizione']}}</div>
+      @include('header')
+
+      <main>
+
+        <div class="product">
+          <div class="product-title">{{$array[$idProduct]['titolo']}}</div>
+          <img width="300px" src="{{$array[$idProduct]['src-h']}}">
+          <img width="300px" src="{{$array[$idProduct]['src-p']}}">
+          <div class="container">
+            <div class="product-description">{{$array[$idProduct]['descrizione']}}</div>
+          </div>
+        </div>
+
+      </main>
+
+      @include('footer')
 
     </body>
 

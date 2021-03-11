@@ -138,48 +138,40 @@
         $array = json_decode($data, true);
       @endphp
 
-      <header>
-        <img class="logo" src="https://upload.wikimedia.org/wikipedia/it/thumb/4/41/Logo_PASTA_LA_MOLISANA.png/1200px-Logo_PASTA_LA_MOLISANA.png">
-        <ul>
-          <li>Home</li>
-          <li>Prodotti</li>
-          <li>News</li>
-        </ul>
-      </header>
+      @include('header')
 
       <main>
+        <div class="container">
+          <section class="section-first">
+            <div class="title">le lunghe</div>
+            @foreach ($array as $product)
+              @if ($product['tipo'] === 'lunga')
+                <img src="{{$product['src']}}">
+              @endif
+            @endforeach
+          </section>
 
-        <section>
-          <div class="title">le lunghe</div>
-          @foreach ($array as $product)
-            @if ($product['tipo'] === 'lunga')
-              <img src="{{$product['src']}}">
-            @endif
-          @endforeach
-        </section>
+          <section>
+            <div class="title">le corte</div>
+            @foreach ($array as $product)
+              @if ($product['tipo'] === 'corta')
+                <img src="{{$product['src']}}">
+              @endif
+            @endforeach
+          </section>
 
-        <section>
-          <div class="title">le corte</div>
-          @foreach ($array as $product)
-            @if ($product['tipo'] === 'corta')
-              <img src="{{$product['src']}}">
-            @endif
-          @endforeach
-        </section>
-
-        <section>
-          <div class="title">le cortissime</div>
-          @foreach ($array as $product)
-            @if ($product['tipo'] === 'cortissima')
-              <img src="{{$product['src']}}">
-            @endif
-          @endforeach
-        </section>
-
+          <section class="section-last">
+            <div class="title">le cortissime</div>
+            @foreach ($array as $product)
+              @if ($product['tipo'] === 'cortissima')
+                <img src="{{$product['src']}}">
+              @endif
+            @endforeach
+          </section>
+        </div>
       </main>
 
-      <footer>
-      </footer>
+      @include('footer')
 
     </body>
 

@@ -5,6 +5,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
+.container {
+  margin: 0 150px;
+}
+
 header .logo {
   width: 200px;
   display: block;
@@ -30,20 +34,82 @@ header ul li:nth-child(2) {
 main {
   background-image: url("https://www.lamolisana.it/wp-content/uploads/2019/07/fondo-slide-classiche.jpg");
   background-size: contain;
-  padding: 30px 0;
-}
-main section {
-  margin: 0 150px;
 }
 main section .title {
   color: #093c9b;
   font-weight: 600;
   font-size: 26px;
   text-transform: uppercase;
-  padding: 15px 0;
+  padding: 20px 0 10px 0;
 }
 main section img {
   width: calc(100% / 3 - 10px);
   margin: 3px;
   cursor: pointer;
+}
+main .product {
+  background: #b6dbe4;
+  color: #093c9b;
+}
+main .product .product-title {
+  font-weight: 600;
+  font-size: 26px;
+  text-align: center;
+  padding-top: 30px;
+}
+main .product img {
+  width: 100%;
+}
+main .product .product-description {
+  font-size: 17px;
+  font-weight: 600;
+  padding-bottom: 30px;
+}
+main .section-first {
+  padding-top: 40px;
+}
+main .section-last {
+  padding-bottom: 40px;
+}
+
+footer {
+  color: #808080;
+  background-image: url("https://www.lamolisana.it/wp-content/uploads/2020/06/footer-montagne-bottom.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-bottom: 40px;
+}
+footer .container {
+  display: flex;
+}
+footer .footer-left {
+  width: 35%;
+  padding: 50px 0;
+}
+footer .footer-left img {
+  width: 200px;
+  margin-bottom: 20px;
+}
+footer .footer-right {
+  width: 65%;
+  padding: 50px 0;
+}
+footer .footer-right .footer-links {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+}
+footer .footer-right .footer-links .footer-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+}
+footer .footer-right .footer-links ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+footer .footer-right .footer-links ul li {
+  cursor: pointer;
+  margin: 5px 0;
 }
