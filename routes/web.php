@@ -14,5 +14,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('homepage');
+});
+
+// il primo argomento di view è il nome del file in resources/views, il secondo un array
+Route::get('/product{id}', function($id) {
+    return view('product', ['idProduct' => $id]);
 });
