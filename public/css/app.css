@@ -1,1 +1,49 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+}
 
+header .logo {
+  width: 200px;
+  display: block;
+  margin: 20px auto;
+  cursor: pointer;
+}
+header ul {
+  list-style: none;
+  text-align: center;
+}
+header ul li {
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 10px 10px 0 0;
+  padding: 15px 10px;
+  cursor: pointer;
+}
+header ul li:nth-child(2) {
+  background: #b6dbe4;
+}
+
+main {
+  background-image: url("https://www.lamolisana.it/wp-content/uploads/2019/07/fondo-slide-classiche.jpg");
+  background-size: contain;
+  padding: 30px 0;
+}
+main section {
+  margin: 0 150px;
+}
+main section .title {
+  color: #093c9b;
+  font-weight: 600;
+  font-size: 26px;
+  text-transform: uppercase;
+  padding: 15px 0;
+}
+main section img {
+  width: calc(100% / 3 - 10px);
+  margin: 3px;
+  cursor: pointer;
+}

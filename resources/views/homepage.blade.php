@@ -3,11 +3,10 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
         <title>La Molisana</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
 
     <body>
@@ -139,10 +138,48 @@
         $array = json_decode($data, true);
       @endphp
 
-      @foreach ($array as $product)
-        <div>{{$product['titolo']}}</div>
-        <img width="300px" src="{{$product['src']}}">
-      @endforeach
+      <header>
+        <img class="logo" src="https://upload.wikimedia.org/wikipedia/it/thumb/4/41/Logo_PASTA_LA_MOLISANA.png/1200px-Logo_PASTA_LA_MOLISANA.png">
+        <ul>
+          <li>Home</li>
+          <li>Prodotti</li>
+          <li>News</li>
+        </ul>
+      </header>
+
+      <main>
+
+        <section>
+          <div class="title">le lunghe</div>
+          @foreach ($array as $product)
+            @if ($product['tipo'] === 'lunga')
+              <img src="{{$product['src']}}">
+            @endif
+          @endforeach
+        </section>
+
+        <section>
+          <div class="title">le corte</div>
+          @foreach ($array as $product)
+            @if ($product['tipo'] === 'corta')
+              <img src="{{$product['src']}}">
+            @endif
+          @endforeach
+        </section>
+
+        <section>
+          <div class="title">le cortissime</div>
+          @foreach ($array as $product)
+            @if ($product['tipo'] === 'cortissima')
+              <img src="{{$product['src']}}">
+            @endif
+          @endforeach
+        </section>
+
+      </main>
+
+      <footer>
+      </footer>
 
     </body>
 
