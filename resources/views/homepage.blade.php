@@ -144,27 +144,27 @@
         <div class="container">
           <section class="section-first">
             <div class="title">le lunghe</div>
-            @foreach ($array as $product)
+            @foreach ($array as $id => $product)
               @if ($product['tipo'] === 'lunga')
-                <img src="{{$product['src']}}">
+                <a href="/product{{$id}}"><img src="{{$product['src']}}"></a>
               @endif
             @endforeach
           </section>
 
           <section>
             <div class="title">le corte</div>
-            @foreach ($array as $product)
+            @foreach ($array as $id => $product)
               @if ($product['tipo'] === 'corta')
-                <img src="{{$product['src']}}">
+                <a href="/product{{$id}}"><img src="{{$product['src']}}"></a>
               @endif
             @endforeach
           </section>
 
           <section class="section-last">
             <div class="title">le cortissime</div>
-            @foreach ($array as $product)
+            @foreach ($array as $id => $product)
               @if ($product['tipo'] === 'cortissima')
-                <img src="{{$product['src']}}">
+                <a href="/product{{$id}}"><img src="{{$product['src']}}"></a>
               @endif
             @endforeach
           </section>

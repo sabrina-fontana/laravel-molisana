@@ -9,6 +9,11 @@
   margin: 0 150px;
 }
 
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
 header .logo {
   width: 200px;
   display: block;
