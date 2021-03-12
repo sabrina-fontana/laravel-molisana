@@ -30,7 +30,7 @@ header {
       display: inline-block;
       font-size: 22px;
       font-weight: 600;
-      margin: 10px 10px 0 0;
+      margin-top: 10px;
       padding: 15px 10px;
       cursor: pointer;
 
@@ -42,8 +42,7 @@ header {
 }
 
 main {
-  background-image: url("https://www.lamolisana.it/wp-content/uploads/2019/07/fondo-slide-classiche.jpg");
-  background-size: contain;
+  background-image: url("/img/fondo-pag-speciali.jpg");
 
   section {
 
@@ -59,12 +58,18 @@ main {
       width: calc(100% / 3 - 10px);
       margin: 3px;
       cursor: pointer;
+      transition: transform .4s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 
   .product {
     background: #b6dbe4;
     color: #093c9b;
+    position: relative;
 
     .product-title {
       font-weight: 600;
@@ -81,6 +86,21 @@ main {
       font-size: 17px;
       font-weight: 600;
       padding-bottom: 30px;
+    }
+
+    .left, .right {
+      display: inline-block;
+      background: #d2e7ef;
+      font-size: 50px;
+      color: #fff;
+      padding: 10px;
+      position: absolute;
+      top: 50%;
+      cursor: pointer;
+    }
+
+    .right {
+      right: 0;
     }
   }
 
@@ -107,7 +127,7 @@ footer {
   }
 
   .footer-left {
-    width: 35%;
+    width: 40%;
     padding: 50px 0;
 
     img {
@@ -117,12 +137,12 @@ footer {
   }
 
   .footer-right {
-    width: 65%;
+    width: 60%;
     padding: 50px 0;
 
     .footer-links {
       display: inline-block;
-      width: 45%;
+      width: 49%;
       vertical-align: top;
 
       .footer-title {
@@ -138,6 +158,10 @@ footer {
         li {
           cursor: pointer;
           margin: 5px 0;
+
+          &:hover {
+            font-weight: 600;
+          }
         }
       }
     }
