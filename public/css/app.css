@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .container {
@@ -20,6 +20,21 @@ header .logo {
   margin: 20px auto;
   cursor: pointer;
 }
+header .menu {
+  font-size: 38px;
+  text-align: center;
+  color: #112263;
+  margin: 40px 0 20px 0;
+  display: none;
+}
+header .menu i {
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  header .menu {
+    display: block;
+  }
+}
 header ul {
   list-style: none;
   text-align: center;
@@ -35,29 +50,44 @@ header ul li {
 header ul li:nth-child(2) {
   background: #b6dbe4;
 }
+@media screen and (max-width: 992px) {
+  header ul {
+    display: none;
+  }
+}
 
 main {
   background-image: url("/img/fondo-pag-speciali.jpg");
 }
 main section .title {
-  color: #093c9b;
-  font-weight: 600;
+  color: #112263;
+  font-weight: 700;
   font-size: 26px;
   text-transform: uppercase;
   padding: 20px 0 10px 0;
 }
 main section img {
-  width: calc(100% / 3 - 10px);
+  width: calc(100% / 3 - 9px);
   margin: 3px;
   cursor: pointer;
   transition: transform 0.4s;
+}
+@media screen and (max-width: 992px) {
+  main section img {
+    width: calc(100% / 2 - 9px);
+  }
+}
+@media screen and (max-width: 767px) {
+  main section img {
+    width: 100%;
+  }
 }
 main section img:hover {
   transform: scale(1.05);
 }
 main .product {
   background: #b6dbe4;
-  color: #093c9b;
+  color: #112263;
   position: relative;
 }
 main .product .product-title {
@@ -70,7 +100,7 @@ main .product img {
   width: 100%;
 }
 main .product .product-description {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 600;
   padding-bottom: 30px;
 }
@@ -102,25 +132,29 @@ footer {
   background-size: contain;
   padding-bottom: 40px;
 }
-footer .container {
-  display: flex;
-}
 footer .footer-left {
-  width: 40%;
-  padding: 50px 0;
+  display: inline-block;
+  width: calc(45% - 10px);
+  padding: 50px 10px 10px 0;
 }
 footer .footer-left img {
   width: 200px;
   margin-bottom: 20px;
 }
+@media screen and (max-width: 992px) {
+  footer .footer-left {
+    width: 100%;
+  }
+}
 footer .footer-right {
-  width: 60%;
-  padding: 50px 0;
+  display: inline-block;
+  width: 55%;
 }
 footer .footer-right .footer-links {
   display: inline-block;
-  width: 49%;
   vertical-align: top;
+  width: calc(50% - 20px);
+  margin-right: 10px;
 }
 footer .footer-right .footer-links .footer-title {
   text-transform: uppercase;
@@ -136,5 +170,10 @@ footer .footer-right .footer-links ul li {
   margin: 5px 0;
 }
 footer .footer-right .footer-links ul li:hover {
-  font-weight: 600;
+  font-weight: 700;
+}
+@media screen and (max-width: 992px) {
+  footer .footer-right .footer-links {
+    width: 100%;
+  }
 }
